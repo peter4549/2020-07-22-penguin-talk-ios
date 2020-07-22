@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var textFieldEmail: UITextField!
+    @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var buttonLogin: UIButton!
     @IBOutlet weak var buttonSignUp: UIButton!
     let remoteConfig = RemoteConfig.remoteConfig()
@@ -17,6 +19,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Test...
+        try! Auth.auth().signOut()
+        
         let statusBar = UIView()
         self.view.addSubview(statusBar)
         statusBar.snp.makeConstraints { (m) in
@@ -31,13 +37,32 @@ class LoginViewController: UIViewController {
         buttonLogin.backgroundColor = UIColor(rgb: Int(color!, radix: 16) ?? 0)
         buttonSignUp.backgroundColor = UIColor(rgb: Int(color!, radix: 16) ?? 0)
         
+        buttonLogin.addTarget(self, action: #selector(signInEvent), for: .touchUpInside)
         buttonSignUp.addTarget(self, action: #selector(presentSignUpView), for: .touchUpInside)
+        
+        Auth.auth().addStateDidChangeListener { (auth, user)
+            in
+            if (user != nil) {
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "MainViewTabBarController") as! UITabBarController
+                self.present(view, animated: true, completion: nil)
+            }
+        }
     }
     
     @objc func presentSignUpView() {
         let view = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         
         self.present(view, animated: true, completion: nil)
+    }
+    
+    @objc func signInEvent() {
+        Auth.auth().signIn(withEmail: textFieldEmail.text!, password: textFieldPassword.text!) { (authDataResult, error) in
+            if (error != nil) {
+                let alert = UIAlertController(title: "Error", message: error.debugDescription, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     /*

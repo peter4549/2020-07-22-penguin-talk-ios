@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7CEABB3F3C039658124C6D31 /* Pods_PenguinTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972BE7693C4D55527CB05ED8 /* Pods_PenguinTalk.framework */; };
+		9617E57824C7EBE4005919A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617E57724C7EBE4005919A0 /* MainViewController.swift */; };
 		9628C8DC24C0378200A90018 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628C8DB24C0378200A90018 /* LoginViewController.swift */; };
 		963302CE24BD570300D5B28C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963302CD24BD570300D5B28C /* AppDelegate.swift */; };
 		963302D024BD570300D5B28C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963302CF24BD570300D5B28C /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		88C4B0F6CA23EE456A247AA9 /* Pods-PenguinTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PenguinTalk.release.xcconfig"; path = "Target Support Files/Pods-PenguinTalk/Pods-PenguinTalk.release.xcconfig"; sourceTree = "<group>"; };
+		9617E57724C7EBE4005919A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9628C8DB24C0378200A90018 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		963302CA24BD570300D5B28C /* PenguinTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963302CD24BD570300D5B28C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				963302E324BD5D3900D5B28C /* RemoteConfigDefaults.plist */,
 				9628C8DB24C0378200A90018 /* LoginViewController.swift */,
 				96943D8424C708610038B618 /* SignUpViewController.swift */,
+				9617E57724C7EBE4005919A0 /* MainViewController.swift */,
 			);
 			path = PenguinTalk;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				9628C8DC24C0378200A90018 /* LoginViewController.swift in Sources */,
 				963302D224BD570300D5B28C /* ViewController.swift in Sources */,
 				963302CE24BD570300D5B28C /* AppDelegate.swift in Sources */,
+				9617E57824C7EBE4005919A0 /* MainViewController.swift in Sources */,
 				963302D024BD570300D5B28C /* SceneDelegate.swift in Sources */,
 				96943D8524C708610038B618 /* SignUpViewController.swift in Sources */,
 			);

@@ -117,11 +117,29 @@
                     <connections>
                         <outlet property="buttonLogin" destination="gjh-QS-CfC" id="zoq-kp-KIA"/>
                         <outlet property="buttonSignUp" destination="Afa-be-m5B" id="Faf-xp-ayd"/>
+                        <outlet property="textFieldEmail" destination="qzS-cN-uiv" id="WYd-fn-S4O"/>
+                        <outlet property="textFieldPassword" destination="jNa-6i-cec" id="8fV-u9-W6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsg-oO-TCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="111.83035714285714"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="uSj-f7-ldR">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="jIz-ad-R4D" customClass="MainViewController" customModule="PenguinTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8To-pI-GH8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="txF-AP-tWm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="People" image="ic_people_black_24dp" id="mHV-vV-hDV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TP-5I-OLz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3034.7826086956525" y="111.83035714285714"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Wbs-OQ-k9w">
@@ -169,7 +187,7 @@
                                     <constraint firstAttribute="height" constant="40" id="0jU-uA-jgA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,11 +258,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pw2-5E-x3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="784"/>
+            <point key="canvasLocation" x="964" y="822"/>
+        </scene>
+        <!--Main View Tab Bar Controller-->
+        <scene sceneID="bsf-5h-NoV">
+            <objects>
+                <tabBarController storyboardIdentifier="MainViewTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="q0K-hc-mFG" customClass="MainViewTabBarController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="70U-eZ-N5I">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jIz-ad-R4D" kind="relationship" relationship="viewControllers" id="6RA-E7-DYS"/>
+                        <segue destination="aCT-kz-2qk" kind="relationship" relationship="viewControllers" id="0uA-v3-MaR"/>
+                        <segue destination="Ppy-so-Oyi" kind="relationship" relationship="viewControllers" id="sVa-IO-fU8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Emv-U6-Kgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2124.6376811594205" y="111.83035714285714"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="XgO-yD-CEx">
+            <objects>
+                <viewController id="Ppy-so-Oyi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lbR-dx-IZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4BO-CG-Rw2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="ic_account_circle_black_24dp" id="Xaq-vy-PF2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puK-kF-KMV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="999"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="NjF-6k-f5f">
+            <objects>
+                <viewController id="aCT-kz-2qk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJM-fM-e1m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FGz-Eb-dwF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="ic_chat_black_24dp" id="ZvP-LG-5Rd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcD-F2-BqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3322" y="844"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_account_circle_black_24dp" width="24" height="24"/>
         <image name="ic_add_to_photos_black_24dp" width="24" height="24"/>
+        <image name="ic_chat_black_24dp" width="24" height="24"/>
         <image name="ic_penguin_100px" width="50" height="50"/>
+        <image name="ic_people_black_24dp" width="24" height="24"/>
     </resources>
 </document>
